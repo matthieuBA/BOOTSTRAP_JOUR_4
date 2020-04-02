@@ -1,20 +1,76 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Credit: http://stackoverflow.com/questions/22196587/how-to-center-align-vertically-the-container-in-bootstrap -->
+  <title>Bootstrap Centered Jumbotron</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <style type="text/css">
+    html,
+    body {
+      /* height: 100%; */
+      color: aliceblue;
+    }
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    body {
+      overflow: hidden;
+      /* Hide scrollbars */
+    }
 
+    .container {
+      /* width: 1025px; */
+    }
 
-  <title>Hello, world!</title>
+    .vertical-center {
+      /* height: 100%; */
+      /* width: 100%; */
+      text-align: center;
+      /* align the inline(-block) elements horizontally */
+      font: 0/0 a;
+      /* remove the gap between inline(-block) elements */
+    }
+
+    .vertical-center:before {
+      /* create a full-height inline block pseudo=element */
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      /* vertical alignment of the inline element */
+      height: 90%;
+    }
+
+    .vertical-center>.container {
+      max-width: 100%;
+      /* background-color: gold; */
+      display: inline-block;
+      vertical-align: middle;
+      /* vertical alignment of the inline element */
+      font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /* <-- reset the font property */
+    }
+
+    @media (max-width: 768px) {
+      .vertical-center:before {
+        /* height: auto; */
+        display: none;
+      }
+    }
+
+    .jumbotron {
+      /* Choisis la hauteur ici */
+      height: 95vh;
+      /* Tu lui donnes une image de background */
+      background-image: url("https://images.pexels.com/photos/416676/pexels-photo-416676.jpeg");
+      /* Centre l'image et la met bien sur tous les écrans */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </head>
 
 <body>
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">The Surfing Project</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -32,37 +88,24 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Nos prochaines sessions</a>
         </li>
-
       </ul>
     </div>
   </nav>
 
 
-  <div class="jumbotron">
+  <div class="jumbotron center">
     <div class="container text-center">
-      <h1>The easiest and powerful way</h1>
-      <div class="row">
-        <div class="col-lg">
-          <div class="top-bg"></div>
-        </div>
-
-        <div class="col-lg iPhone-features>
-
-        </div>
-      </div>
+      <h1 class="display-4">Partez à l'aventure</h1>
+      <p class="lead">Découvrez notre école de surf en peer-learning</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Je m'inscris à la prochaine session</a> <a
+        class="btn btn-secondary btn-lg" href="#" role="button">Je découvre le programme</a>
     </div>
   </div>
 
+  <!-- JavaScript -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
