@@ -1,25 +1,10 @@
-
-
 .jumbotron {
-  /* Choisis la hauteur ici */
-  /* height: 500px; */
-
-  /* Tu lui donnes une image de background */
-  /* background-image: url("https://i.imgur.com/k4F4xFt.png"); */
-
-  /* Centre l'image et la met bien sur tous les écrans */
-  background-position: center;background-repeat: no-repeat;height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* min-height: 100%; */
-  background-repeat: no-repeat;
-  background-position: right top;
-
-    height: 100vh;
-
+  height:100%;
+  width:100%;
 }
-
-html, body {
-  height: 100vh;
-  width : 100vw
+.container {
+  width:1025px;
 }
+.jumbotron .container {
+  max-width: 100%;
+} 

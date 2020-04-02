@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
   <!-- Credit: http://stackoverflow.com/questions/22196587/how-to-center-align-vertically-the-container-in-bootstrap -->
   <title>Bootstrap Centered Jumbotron</title>
   <meta charset="utf-8" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
   <style type="text/css">
-    html,
-    body {
-      /* height: 100%; */
+
+    html, body {
+      height: 100%;
     }
 
-    .container {
+    .container{
       width: 1025px;
     }
 
@@ -22,30 +21,24 @@
       height: 100%;
       width: 100%;
 
-      text-align: center;
-      /* align the inline(-block) elements horizontally */
-      font: 0/0 a;
-      /* remove the gap between inline(-block) elements */
+      text-align: center;  /* align the inline(-block) elements horizontally */
+      font: 0/0 a;         /* remove the gap between inline(-block) elements */
     }
 
-    .vertical-center:before {
-      /* create a full-height inline block pseudo=element */
+    .vertical-center:before {    /* create a full-height inline block pseudo=element */
       content: ' ';
       display: inline-block;
-      vertical-align: middle;
-      /* vertical alignment of the inline element */
+      vertical-align: middle;  /* vertical alignment of the inline element */
       height: 100%;
     }
 
-    .vertical-center>.container {
+    .vertical-center > .container {
       max-width: 100%;
-      /* background-color: gold; */
+      background-color: gold;
 
       display: inline-block;
-      vertical-align: middle;
-      /* vertical alignment of the inline element */
-      font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      /* <-- reset the font property */
+      vertical-align: middle;  /* vertical alignment of the inline element */
+      font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;        /* <-- reset the font property */
     }
 
     @media (max-width: 768px) {
@@ -55,55 +48,19 @@
       }
     }
 
-    .jumbotron {
-      /* Choisis la hauteur ici */
-      height: 95vh;
-
-      /* Tu lui donnes une image de background */
-      background-image: url("https://images.pexels.com/photos/416676/pexels-photo-416676.jpeg");
-
-      /* Centre l'image et la met bien sur tous les écrans */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   </style>
 
 </head>
-
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">The Surfing Project</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Le programme</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nos prochaines sessions</a>
-        </li>
-
-      </ul>
-    </div>
-  </nav>
-
 
   <div class="jumbotron vertical-center">
     <div class="container text-center">
 
       <h1>The easiest and powerful way</h1>
 
-      <!-- <div class="row"> -->
+      <div class="row">
 
-        <!-- <div class="col-md-7">
+        <div class="col-md-7">
           <div class="top-bg"></div>
         </div>
 
@@ -130,7 +87,7 @@
           </ul>
         </div>
 
-      </div> -->
+      </div>
 
     </div>
   </div>
@@ -140,5 +97,4 @@
   <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
 
 </body>
-
 </html>
