@@ -1,5 +1,5 @@
 
-.jumbotron-hero {
+.jumbotron {
   /* Choisis la hauteur ici */
   height: 500px;
 
@@ -10,4 +10,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 50%;
+  background-repeat: no-repeat;
+  background-position: right top;
 }
